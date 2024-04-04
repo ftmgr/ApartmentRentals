@@ -4,11 +4,15 @@ const Content = ({
     apartments,
     favorites,
     adminMode,
-    addApartment,
     deleteApartment,
     addToFavorites,
     removeFromFavorites
 }) => {
+    if (!Array.isArray(apartments)) {
+        console.error('Apartments is not an array');
+        return null; // or some other appropriate action
+    }
+
     return (
         <div>
             <main>

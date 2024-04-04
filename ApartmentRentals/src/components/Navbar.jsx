@@ -1,9 +1,11 @@
 import React from 'react';
+import logo from '../assets/rental-logo.jpg';
 
 const Navbar = ({ adminMode, toggleAdminMode }) => {
     return (
         <div>
             <nav>
+                <img src={logo} class="logo" />
                 <ul>
                     <li>Home</li>
                     <li>About</li>

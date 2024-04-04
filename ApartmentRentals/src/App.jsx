@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
-import Navbar from './Navbar';
-import Sidebar from './Sidebar';
-import Footer from './Footer';
-import Content from './Content';
+import Navbar from './components/Navbar.jsx';
+import Sidebar from './components/Sidebar.jsx';
+import Footer from './components/Footer.jsx';
+import Content from './components/Content.jsx';
+import rentalsJSON from './assets/rentals.json';
 import './App.css'
 
 const App = () => {
-  const [apartments, setApartments] = useState([]);
+  const [apartments, setApartments] = useState(rentalsJSON);
   const [favorites, setFavorites] = useState([]);
   const [adminMode, setAdminMode] = useState(false);
 
@@ -14,9 +15,9 @@ const App = () => {
     setAdminMode(!adminMode);
   };
 
-  const addApartment = (newApartment) => {
-    setApartments([...apartments, newApartment]);
-  };
+  /* const addApartment = (newApartment) => {
+     setApartments([...apartments, newApartment]);
+   }; */
 
   const deleteApartment = (id) => {
     setApartments(apartments.filter(apartment => apartment.id !== id));
@@ -27,7 +28,7 @@ const App = () => {
     setFavorites([...favorites, apartmentToAdd]);
   };
 
-  const removeFromFavorites = (id) => {
+  const removeFromFavorites = (id) => { // ?
     setFavorites(favorites.filter(apartment => apartment.id !== id));
   };
 
@@ -39,7 +40,7 @@ const App = () => {
         apartments={apartments}
         favorites={favorites}
         adminMode={adminMode}
-        addApartment={addApartment}
+
         deleteApartment={deleteApartment}
         addToFavorites={addToFavorites}
         removeFromFavorites={removeFromFavorites}
