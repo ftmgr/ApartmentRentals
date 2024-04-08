@@ -57,7 +57,7 @@ const ListItem = ({ item, index, onDelete }) => {
 const App = () => {
   const [apartments, setApartments] = useState(rentalsJSON);
   const [favorites, setFavorites] = useState([]);
-  const [adminMode, setAdminMode] = useState(false);
+  const [adminMode, setAdminMode] = useState(true);
 
   const toggleAdminMode = () => {
     setAdminMode(!adminMode);
@@ -96,7 +96,7 @@ const App = () => {
             removeFromFavorites={removeFromFavorites}
           />
           <Routes>
-            <Route exact path="/" component={DashboardPage} />
+            <Route exact path="/dashboard" component={DashboardPage} />
             <Route path="/item/:id" component={ItemDetailsPage} />
             <Route path="/about" component={AboutPage} />
             <Route path='' component={NotFoundPage} />

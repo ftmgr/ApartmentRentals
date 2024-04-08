@@ -1,10 +1,21 @@
 import React from 'react';
 
 const DashboardPage = () => {
+    const [items, setItems] = useState([]);
+
+    const handleAddItem = (newItem) => {
+        setItems([...items, newItem]);
+    };
+
     return (
         <div>
             <h1>Dashboard Page</h1>
-            {/* Render your items list here */}
+            <NewItemForm onSubmit={handleAddItem} />
+            <ul>
+                {items.map((item, index) => (
+                    <ListItem key={index} item={item} />
+                ))}
+            </ul>
         </div>
     );
 };
