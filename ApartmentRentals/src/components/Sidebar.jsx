@@ -4,11 +4,10 @@ const Sidebar = () => {
     return (
         <div>
             <aside>
-                <ul>
-                    <li>Search</li>
-                    <li>Filter</li>
-                    <li>Sort</li>
-                </ul>
+                    <button>Search</button>
+                    <button>Filter</button>
+                    <button>Sort</button>
+                
             </aside>
         </div>
     );

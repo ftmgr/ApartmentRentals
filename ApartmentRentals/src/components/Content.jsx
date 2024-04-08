@@ -4,7 +4,6 @@ const Content = ({
     apartments,
     favorites,
     adminMode,
-    addApartment,
     deleteApartment,
     addToFavorites,
     removeFromFavorites
