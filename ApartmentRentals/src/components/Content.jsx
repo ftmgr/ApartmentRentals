@@ -1,6 +1,10 @@
 import React from 'react';
+
+import cityBackground2 from '../assets/cityBackground2.jpeg';
+
 import FavoritesList from './FavoriteLists';;
 //  <FavoritesList favorites={favorites} />
+
 
 const Content = ({
     apartments,
@@ -19,8 +23,14 @@ const Content = ({
     return (
         <div>
             <main>
+            
                 <h1>Rental Houses</h1>
+
+    
+                <div>
+
                 <div className="ApartmentCard" >
+
                     {apartments.map(apartment => (
                         <div className="apartmentList" key={apartment.id} style={{ display: 'flex', flexDirection: 'column', border: '1px solid black', margin: '3rem' }}>
                             <h2>{apartment.name}</h2>
@@ -47,6 +57,21 @@ const Content = ({
                         </div>
                     ))}
                 </div>
+
+                {favorites.length > 0 && (
+                    <div>
+                        <h2>Favorites</h2>t
+                        {favorites.map(apartment => (
+                            <div key={apartment.id}>
+                                <h3>{apartment.name}</h3>
+                                <button onClick={() => removeFromFavorites(apartment.id)}>
+                                    Remove from Favorites
+                                </button>
+                            </div>
+                        ))}
+                    </div>
+                )}
+
             </main>
         </div>
     );

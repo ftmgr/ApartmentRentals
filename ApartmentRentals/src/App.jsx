@@ -13,49 +13,11 @@ import NotFoundPage from './pages/NotFoundPage.jsx';
 import './App.css'
 
 //ListItem and List usage? How? Why do I need this?
-/*const List = ({ data }) => {
-  const [items, setItems] = useState(data);
 
-  const handleDelete = (index) => {
-    const newItems = [...items];
-    newItems.splice(index, 1);
-    setItems(newItems);
-  };
-
-  return (
-    <ul>
-      {items.map((item, index) => (
-        <ListItem key={index} item={item} index={index} onDelete={handleDelete} />
-      ))}
-    </ul>
-  );
-};
-
-const ListItem = ({ item, index, onDelete }) => {
-  // Conditionally rendering content based on properties or conditions
-  let content = null;
-  if (item.isCompleted !== undefined) {
-    content = item.isCompleted ? '✅' : '❌';
-  } else {
-    content = item.value > 10 ? 'High' : 'Low';
-  }
-
-  return (
-    <li>
-      {content}
-      <button onClick={() => onDelete(index)}>Delete</button>
-    </li>
-  );
-
-   <div>
-              <h1>List Component</h1>
-              <List data={rentalsJSON} />
-            </div>
-};
- */
 
 const App = () => {
   const [apartments, setApartments] = useState(rentalsJSON);
+
   const [favorites, setFavorites] = useState([]);
   const [adminMode, setAdminMode] = useState(true);
 
@@ -63,9 +25,6 @@ const App = () => {
     setAdminMode(!adminMode);
   };
 
-  /* const addApartment = (newApartment) => {
-     setApartments([...apartments, newApartment]);
-   }; */
 
   const deleteApartment = (id) => {
     setApartments(apartments.filter(apartment => apartment.id !== id));
@@ -81,6 +40,7 @@ const App = () => {
   };
 
   return (
+
     <>
       <Router>
         <div className="App relative z-20 pt-20">
@@ -107,7 +67,8 @@ const App = () => {
         </div>
       </Router>
     </>
+
   );
-};
+}
 
 export default App;
