@@ -57,7 +57,7 @@ const ListItem = ({ item, index, onDelete }) => {
 const App = () => {
   const [apartments, setApartments] = useState(rentalsJSON);
   const [favorites, setFavorites] = useState([]);
-  const [adminMode, setAdminMode] = useState(false);
+  const [adminMode, setAdminMode] = useState(true);
 
   const toggleAdminMode = () => {
     setAdminMode(!adminMode);
@@ -81,30 +81,32 @@ const App = () => {
   };
 
   return (
-    <Router>
-      <div>
-        <Navbar adminMode={adminMode} toggleAdminMode={toggleAdminMode} />
-        <div className="container">
-          <Sidebar />
-          <Content
-            apartments={apartments}
-            favorites={favorites}
-            adminMode={adminMode}
+    <>
+      <Router>
+        <div className="App relative z-20 pt-20">
+          <Navbar adminMode={adminMode} toggleAdminMode={toggleAdminMode} />
+          <div className="container">
+            <Sidebar />
+            <Content
+              apartments={apartments}
+              favorites={favorites}
+              adminMode={adminMode}
 
-            deleteApartment={deleteApartment}
-            addToFavorites={addToFavorites}
-            removeFromFavorites={removeFromFavorites}
-          />
-          <Routes>
-            <Route exact path="/" component={DashboardPage} />
-            <Route path="/item/:id" component={ItemDetailsPage} />
-            <Route path="/about" component={AboutPage} />
-            <Route path='' component={NotFoundPage} />
-          </Routes>
+              deleteApartment={deleteApartment}
+              addToFavorites={addToFavorites}
+              removeFromFavorites={removeFromFavorites}
+            />
+            <Routes>
+              <Route exact path="/dashboard" component={DashboardPage} />
+              <Route path="/item/:id" component={ItemDetailsPage} />
+              <Route path="/about" component={AboutPage} />
+              <Route path='' component={NotFoundPage} />
+            </Routes>
+          </div>
+          <Footer />
         </div>
-        <Footer />
-      </div>
-    </Router>
+      </Router>
+    </>
   );
 };
 
