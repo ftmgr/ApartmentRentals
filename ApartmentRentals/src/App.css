@@ -44,11 +44,11 @@ nav {
     height: 85px;
 
 }
-.menu > li:hover > a {
+.menu > li:hover > link {
     color: #032d60
 }
 
-.menu > li :hover > a ::before {
+.menu > li :hover > link ::before {
     visibility: visible;
     scale: 1 1;
 }
@@ -68,27 +68,27 @@ nav {
     height 0.3s
     ease-in-out;
 }
-.menu li .submenu a {
+.menu li .submenu link {
     color:#fff;
     opacity: 0;
     font-size: 16px;
     transition: opacity 0.25s;
 }
-.menu > li .submenu a {
+.menu > li .submenu link {
     opacity: 1;
 }
-.menu > li .submenu a:hover {
+.menu > li .submenu link:hover {
     background: rgb( 0 0 0 / 20%);
 
 }
     
-.menu > li a {
+.menu > li link {
     color: #999;
     position: relative;
     height: 100%;
 }
 
-.menu > li > a::before {
+.menu > li > link::before {
     content: "";
     position: absolute;
     left: 0;
@@ -154,9 +154,4 @@ nav {
     flex-direction: column;
     justify-content: center;
 
-}
-
-.rentBody {
-
-    img src={cityBackground2} className="cityBackground2" alt="App cityBackground2" resizeMode= 'cover' style={{flex : 1}}
 }
