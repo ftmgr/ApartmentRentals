@@ -35,8 +35,9 @@ function App() {
 
   return (
     <div>
-      <Navbar adminMode={adminMode} toggleAdminMode={toggleAdminMode} />
-      <Sidebar />
+      <body className="rentBody"/>
+      <Navbar className= "navBar" adminMode={adminMode} toggleAdminMode={toggleAdminMode} />
+      <Sidebar className= "sideBar" />
       <Content
         apartments={apartments}
         favorites={favorites}
@@ -44,7 +45,7 @@ function App() {
         deleteApartment={deleteApartment}
         addToFavorites={addToFavorites}
         removeFromFavorites={removeFromFavorites} />
-      <Footer />
+      <Footer className= "footer"/>
     </div>
   );
 }

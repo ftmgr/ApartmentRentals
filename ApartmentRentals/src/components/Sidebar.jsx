@@ -3,7 +3,7 @@ import React from 'react';
 const Sidebar = () => {
     return (
         <div>
-            <aside>
+            <aside class="sideBar" >
                     <button>Search</button>
                     <button>Filter</button>
                     <button>Sort</button>
@@ -14,3 +14,5 @@ const Sidebar = () => {
 };
 
 export default Sidebar;
+
+

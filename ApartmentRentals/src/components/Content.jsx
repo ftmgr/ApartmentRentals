@@ -1,4 +1,5 @@
 import React from 'react';
+import cityBackground2 from '../assets/cityBackground2.jpeg';
 
 const Content = ({
     apartments,
@@ -11,7 +12,9 @@ const Content = ({
     return (
         <div>
             <main>
+            
                 <h1>Rental Houses</h1>
+    
                 <div>
                     {apartments.map(apartment => (
                         <div key={apartment.id}>
@@ -30,7 +33,7 @@ const Content = ({
                 </div>
                 {favorites.length > 0 && (
                     <div>
-                        <h2>Favorites</h2>
+                        <h2>Favorites</h2>t
                         {favorites.map(apartment => (
                             <div key={apartment.id}>
                                 <h3>{apartment.name}</h3>
