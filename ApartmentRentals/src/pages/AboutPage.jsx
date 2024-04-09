@@ -1,5 +1,7 @@
 import React from 'react';
 
+//Not sure to use this for now
+
 const AboutPage = () => {
     return (
         <div>

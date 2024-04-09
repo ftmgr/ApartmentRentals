@@ -1,5 +1,7 @@
 import React from 'react';
 
+//show all the items in the list..
+
 const DashboardPage = () => {
     const [items, setItems] = useState([]);
 
@@ -9,7 +11,7 @@ const DashboardPage = () => {
 
     return (
         <div>
-            <h1>Dashboard Page</h1>
+            <h1>All Houses Available</h1>
             <NewItemForm onSubmit={handleAddItem} />
             <ul>
                 {items.map((item, index) => (
@@ -20,4 +22,4 @@ const DashboardPage = () => {
     );
 };
 
-export default DashboardPage; // Ensure you have this line
+export default DashboardPage;

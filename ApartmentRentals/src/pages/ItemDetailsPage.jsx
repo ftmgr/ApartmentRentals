@@ -1,9 +1,11 @@
 import React from 'react';
 
+//show the only item that the user clicked..
+
 const ItemDetailsPage = () => {
     return (
         <div>
-            <h1>Dashboard Page</h1>
+            <h1>Apartment Details</h1>
             {/* Render your items list here */}
         </div>
     );

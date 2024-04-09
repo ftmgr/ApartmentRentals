@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 
+//Update the item that already exist on the page...
+
 const UpdateItemForm = ({ item, onSubmit }) => {
     const [itemName, setItemName] = useState(item.name);
     const [itemDescription, setItemDescription] = useState(item.description);
