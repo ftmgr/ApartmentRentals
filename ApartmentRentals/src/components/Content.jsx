@@ -23,11 +23,8 @@ const Content = ({
     return (
         <div>
             <main>
-            
-                <h1>Rental Houses</h1>
 
-    
-                <div>
+                <h1>Rental Houses</h1>
 
                 <div className="ApartmentCard" >
 
